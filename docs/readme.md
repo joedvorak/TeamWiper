@@ -45,21 +45,6 @@ The car has two types of fuses. The ignition fuses only have a voltage output wh
 
 Next, we set up the motor. We are controlling the motor using an H-bridge. The inputs on the H-bridge, AIN1 and AIN2, are going into pins 7 and 4, respectively. The PWMA pin is attached to pin 3 and the standby is on pin 8. The motors are connected to the two output pins. Using the regulated permanent voltage, we powered the logic for the H-bridge (pin Vcc). On pin Vm, which powers the motor, we are using a 9V battery. The 5V from the permanent will go to the Vin for powering the Arduino and the ground for the Arduino and the voltage regulator was created by attaching a wire to metal inside the car.
 
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/ButtonsToo.jpg)
-
-The last electrical component controlled by the Arduino is added, the 10A relay. The relay allows the Arduino to use the information from the temperature sensor to turn on or off the other electrical assembly, the combination of the water pump, fans, and peltier chips.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/RelayAlso.jpg)
-
-The fan and heat sink are attached to the hot side of the Peltier chips with thermal paste and super glue. The water cooler is attached to the cold side of the Peltier chip with thermal paste and super glue. The entire assembly is then glued to the bottom of the container and ventilation holes are cut in the side of the tub. Process repeated for other water cooler assembly.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/peltierheatsinkassembly.jpg)
-
-The 30A, 12V power supply is connected to the project first through a switch and then on to the Arduino directly for external power, and to the Peltier/Fan/Water pump assemblies by way of the relay.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/tundra3000.jpg)
-
 ## Schematics
 Red wire= positive, Green wire= negative, Blue wire= analog/digital outputs
 
