@@ -12,28 +12,24 @@ The goal of our design was to create a product that would automatically lift win
 # Video
 # Materials
 ## Materials
-* Arduino Uno
-* 2x Peltier Chips
-* Waterproof Temperature Probe
-* DC Water Pump
-* 2x 12v Fans w/heat sinks
-* 10 Amp Relay
-* 4.7KOhm Resistor
-* OLED Screen
-* 2x Pushbuttons
-* Pushbutton Resistors
-* Wire
-* 3/8" Inside Diameter Tubing
-* Large Plastic Container
-* Super Glue
-* Thermal Paste
+*Electrifly GD-600 Electric Flight Gear Drive 
+*Arduino Uno microcontroller
+*RC4WD 80t motor
+*Sparkfun Motor Driver Dual TB
+*L7805 voltage regulator
+*2 1KOhm resistor
+*Semitec 103AT-11 thermistor
+*2 ATM fuse taps
 ## Tools and Supplies
-* 30 Amp, 12V Power Supply
-* Solder
-* Soldering Iron
-* Box Knife
-* Wire Strippers
-* Small Flathead Screwdriver
+*solder
+*soldering iron 
+*3D printer 
+*laser cutter
+*wire cutters
+*wire
+*breadboard 
+*wire strippers
+*electrical tape
 # Assembly Procedures
 The theory behind initial assembly was to get each electrical component working and communicating with the Arduino before adding the next.
 
