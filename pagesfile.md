@@ -12,24 +12,24 @@ The goal of our design was to create a product that would automatically lift win
 # Video
 # Materials
 ## Materials
-*Electrifly GD-600 Electric Flight Gear Drive 
-*Arduino Uno microcontroller
-*RC4WD 80t motor
-*Sparkfun Motor Driver Dual TB
-*L7805 voltage regulator
-*2 1KOhm resistor
-*Semitec 103AT-11 thermistor
-*2 ATM fuse taps
+* Electrifly GD-600 Electric Flight Gear Drive 
+* Arduino Uno microcontroller
+* RC4WD 80t motor
+* Sparkfun Motor Driver Dual TB
+* L7805 voltage regulator
+* 2 1KOhm resistor
+* Semitec 103AT-11 thermistor
+* 2 ATM fuse taps
 ## Tools and Supplies
-*solder
-*soldering iron 
-*3D printer 
-*laser cutter
-*wire cutters
-*wire
-*breadboard 
-*wire strippers
-*electrical tape
+* solder
+* soldering iron 
+* 3D printer 
+* laser cutter
+* wire cutters
+* wire
+* breadboard 
+* wire strippers
+* electrical tape
 # Assembly Procedures
 The theory behind initial assembly was to get each electrical component working and communicating with the Arduino before adding the next.
 
