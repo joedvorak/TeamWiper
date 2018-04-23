@@ -31,29 +31,15 @@ The goal of our design was to create a product that would automatically lift win
 * wire strippers
 * electrical tape
 # Assembly Procedures
-The theory behind initial assembly was to get each electrical component working and communicating with the Arduino before adding the next.
+Our assembly involved coding each component to communicate with the microcontroller individually before setting it up to work all together.
 
-The Temperature sensor and LED were wired to the Arduino using a temporary breadboard. A 4.7KOhm resistor was added between the white data line and red power line of the waterproof temperature probe.
+First, we set up our temperature sensors using a temporary breadboard with the sensors connected to A0. The temperature sensor acts as a thermistor which increases resistance as the temperature decreases. To measure what the temperature was we created a voltage divider using a 10kOhm resistor. Once we have it as a resistance we use the values given by the manufacturer to create an equation which converts the resistance into temperature in Celsius. 
 
-The OLED display was wired according to the datasheet, with SCL and SDA going to pins A5 and A4 respectively while 3.3V of power was fed from the Arduino.
+![tempresisstance](https://user-images.githubusercontent.com/35348092/39151307-d622e204-4712-11e8-8dcc-31338e3fa0b0.jpg)
 
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/SensorandLED6.jpg)
+The car has two types of fuses. The ignition fuses only have a voltage output when the car is on. Permanent fuses always have a voltage output. For our project we are going to use an ignition fuse to signal when the car is on and a permanent fuse to power the Arduino. However, the voltage output of the car ranges from 10-14V and the Arduino can only handle voltage inputs of up to 5V, so we used voltage regulators to maintain a steady output of 5V. 
 
-Now that the temperature probe and LED are all communicating with the Arduino, the pushbuttons and code to allow the selection of desired temperature are added.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/ButtonsToo.jpg)
-
-The last electrical component controlled by the Arduino is added, the 10A relay. The relay allows the Arduino to use the information from the temperature sensor to turn on or off the other electrical assembly, the combination of the water pump, fans, and peltier chips.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/RelayAlso.jpg)
-
-The fan and heat sink are attached to the hot side of the Peltier chips with thermal paste and super glue. The water cooler is attached to the cold side of the Peltier chip with thermal paste and super glue. The entire assembly is then glued to the bottom of the container and ventilation holes are cut in the side of the tub. Process repeated for other water cooler assembly.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/peltierheatsinkassembly.jpg)
-
-The 30A, 12V power supply is connected to the project first through a switch and then on to the Arduino directly for external power, and to the Peltier/Fan/Water pump assemblies by way of the relay.
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/tundra3000.jpg)
+Next, we set up the motor. We are controlling the motor using an H-bridge. The inputs on the H-bridge, AIN1 and AIN2, are going into pins 7 and 4, respectively. The PWMA pin is attached to pin 3 and the standby is on pin 8. The motors are connected to the two output pins. Using the regulated permanent voltage, we powered the logic for the H-bridge (pin Vcc). On pin Vm, which powers the motor, we are using a 9V battery. The 5V from the permanent will go to the Vin for powering the Arduino and the ground for the Arduino and the voltage regulator was created by attaching a wire to metal inside the car.
 
 ## Schematics
 Red wire= positive, Green wire= negative, Blue wire= analog/digital outputs
