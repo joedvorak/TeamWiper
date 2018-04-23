@@ -41,7 +41,7 @@ The Temperature sensor and LED were wired to the Arduino using a temporary bread
 
 The OLED display was wired according to the datasheet, with SCL and SDA going to pins A5 and A4 respectively while 3.3V of power was fed from the Arduino.
 
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/SensorandLED6.jpg)
+![tempresisstance](https://user-images.githubusercontent.com/35348092/39151307-d622e204-4712-11e8-8dcc-31338e3fa0b0.jpg)
 
 Now that the temperature probe and LED are all communicating with the Arduino, the pushbuttons and code to allow the selection of desired temperature are added.
 
