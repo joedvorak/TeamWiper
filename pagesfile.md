@@ -101,6 +101,8 @@ for ( i = 0; i < 9; i++) {           // we need 9 bytes
 # Test Equipment
 * temperature sensor 
 * Arduino uno 
+* wire
+* 2 1KOhm resistors
 * Matlab 
 * Excel
 # Test Procedures
