@@ -39,7 +39,28 @@ First, we set up our temperature sensors using a temporary breadboard with the s
 
 The car has two types of fuses. The ignition fuses only have a voltage output when the car is on. Permanent fuses always have a voltage output. For our project we are going to use an ignition fuse to signal when the car is on and a permanent fuse to power the Arduino. However, the voltage output of the car ranges from 10-14V and the Arduino can only handle voltage inputs of up to 5V, so we used voltage regulators to maintain a steady output of 5V. 
 
+![fuses](https://user-images.githubusercontent.com/35348092/39213435-8c42e7a6-47df-11e8-9007-9be438cdfd7f.jpg)
+
 Next, we set up the motor. We are controlling the motor using an H-bridge. The inputs on the H-bridge, AIN1 and AIN2, are going into pins 7 and 4, respectively. The PWMA pin is attached to pin 3 and the standby is on pin 8. The motors are connected to the two output pins. Using the regulated permanent voltage, we powered the logic for the H-bridge (pin Vcc). On pin Vm, which powers the motor, we are using a 9V battery. The 5V from the permanent will go to the Vin for powering the Arduino and the ground for the Arduino and the voltage regulator was created by attaching a wire to metal inside the car.
+
+![inkedmicrocontroller_li](https://user-images.githubusercontent.com/35348092/39213188-e020cb96-47de-11e8-83c7-63a4c9eb21c4.jpg)
+
+Magenta = senses if the car is on, lime = temperature sensor, blue = power supply for arduino and motor 
+
+
+![h bridge](https://user-images.githubusercontent.com/35348092/39212541-0532d7e6-47dd-11e8-9669-3c7737306411.jpg)
+
+More specifically, for our H-bridge:
+* Vm was connected to the positive terminal of our 9V battery
+* Vcc was wired to our breadboard and powered from the car
+* GND was ground from car, on breadboard
+* A01 is the red wire of the motor
+* A02 is the black wire of the motor
+* PWMA is Pin 3
+* AIN2 is Pin 4
+* AIN1 is Pin 7
+* STBY is Pin 8
+* GND (right side) is negative terminal of the 9V battery
 
 ## Schematics
 Red wire= positive, Green wire= negative, Blue wire= analog/digital outputs
@@ -78,20 +99,25 @@ for ( i = 0; i < 9; i++) {           // we need 9 bytes
   fahrenheit = celsius * 1.8 + 32.0;
 ```
 # Test Equipment
-Not Provided.
+* temperature sensor 
+* Arduino uno 
+* Matlab 
+* Excel
 # Test Procedures
-Not Provided.
+We tested the accuracy of our temperature sensor to ensure that it would be able to sense freezing outdoor temperatures within a reasonable time frame. This was done by taking our thermistor from an indoor temperature of 70°F into a walk-in freezer at a known temperature of 36°F. 
 # Test Results
-No text provided
+We used Matlab to print the temperature values every second and then created an Excel graph to display the temperature against the time. This shows that the temperature sensor started at 70°F and ended at 36.87°F. 
 
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/Graph.png)
+
 
 # Discussion
 ## Design Decisions
 Not Provided
 ## Test Results Discussion
-The Peltier Live Well Cooler allows the user to select the desired maintenance temperature of the water in the live well using 2 pushbuttons and will then automatically cycle the system on and off while giving the user a real time readout of the current live well water temperature
+Since we were comparing it to known temperatures, this test proved the accuracy of our sensor and code. Therefore, we felt comfortable using it for our project.
 # References
-The OLED was connected with help from this instructable: http://www.instructables.com/id/Monochrome-096-i2c-OLED-display-with-arduino-SSD13/
-After finding the correct i2c address for the display using the i2c scanner, an example sketch from the Adafruit SSD1306 library was uploaded to the Arduino. After verification that the OLED was working, code from the example sketch was reworked into the code needed to display our data.
-Similarly, code to run the temperature probe was borrowed from the OneWire library example sketch and modified to meet the needs of the project.
+We used the Sparkfun library to get our motor running.
+https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide
+
+We used the gear box manual for calculations when creating the motor arm and power needed
+https://www.greatplanes.com/motors/gearboxes.php
