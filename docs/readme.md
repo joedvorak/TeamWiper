@@ -1,7 +1,7 @@
 Welcome to the Team Wiper's Design Page!
 # Automated Windshield Wiper Lift
 Built by:
-* #### Scrum master: Lucy Nieymeyer
+* #### Scrum master: Lucy Niemeyer
 * #### Product Owner: Erica Kevnick
 * Rebecca Buchanan 
 * Nick Armendarez
@@ -112,13 +112,14 @@ For another test we simulated our code in TinkerCad. We put our completed code i
 # Test Results
 We used Arduino to print the temperature values every second and then created an Excel graph to display the temperature against the time. This shows that the temperature sensor started at 70°F and ended at 36.87°F. 
 
-
+The simulation showed that our code was correct and working before we hooked it up to the car.
 
 # Discussion
 ## Design Decisions
 Not Provided
 ## Test Results Discussion
 Since we were comparing it to known temperatures, this test proved the accuracy of our sensor and code. Therefore, we felt comfortable using it for our project.
+The simulation provided a safe way to test the code without risk of frying any of the circuit components or doing damage to fuses in the car.
 # References
 We used the Sparkfun library to get our motor running.
 https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide
