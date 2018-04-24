@@ -39,11 +39,23 @@ First, we set up our temperature sensors using a temporary breadboard with the s
 
 The car has two types of fuses. The ignition fuses only have a voltage output when the car is on. Permanent fuses always have a voltage output. For our project we are going to use an ignition fuse to signal when the car is on and a permanent fuse to power the Arduino. However, the voltage output of the car ranges from 10-14V and the Arduino can only handle voltage inputs of up to 5V, so we used voltage regulators to maintain a steady output of 5V. 
 
-![microcontroller](https://user-images.githubusercontent.com/35348092/39212621-3af95594-47dd-11e8-9b81-f89e1304e160.jpg)
+
 
 Next, we set up the motor. We are controlling the motor using an H-bridge. The inputs on the H-bridge, AIN1 and AIN2, are going into pins 7 and 4, respectively. The PWMA pin is attached to pin 3 and the standby is on pin 8. The motors are connected to the two output pins. Using the regulated permanent voltage, we powered the logic for the H-bridge (pin Vcc). On pin Vm, which powers the motor, we are using a 9V battery. The 5V from the permanent will go to the Vin for powering the Arduino and the ground for the Arduino and the voltage regulator was created by attaching a wire to metal inside the car.
 
 ![h bridge](https://user-images.githubusercontent.com/35348092/39212541-0532d7e6-47dd-11e8-9669-3c7737306411.jpg)
+
+More specifically, for our H-bridge:
+* Vm was connected to the positive terminal of our 9V battery
+* Vcc was wired to our breadboard and powered from the car
+* GND was ground from car, on breadboard
+* A01 is the red wire of the motor
+* A02 is the black wire of the motor
+* PWMA is Pin 3
+* AIN2 is Pin 4
+* AIN1 is Pin 7
+* STBY is Pin 8
+* GND (right side) is negative terminal of the 9V battery
 
 ## Schematics
 Red wire= positive, Green wire= negative, Blue wire= analog/digital outputs
