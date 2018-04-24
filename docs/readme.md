@@ -100,11 +100,13 @@ for ( i = 0; i < 9; i++) {           // we need 9 bytes
 ```
 # Test Equipment
 * temperature sensor 
-* Arduino uno 
+* Arduino uno
+* wire
+* 2 1KOhm resistors
 * Matlab 
 * Excel
 # Test Procedures
-We tested the accuracy of our temperature sensor to ensure that it would be able to sense freezing outdoor temperatures within a reasonable time frame. This was done by taking our thermistor from an indoor temperature of 70°F into a walk-in freezer at a known temperature of 36°F. 
+We tested the accuracy of our temperature sensor to ensure that it would be able to sense freezing outdoor temperatures within a reasonable time frame. We used our setup for the thermistor as descirbed previously with the other components (the power supply and voltage sensor) removed. This was done by taking our thermistor from an indoor temperature of 70°F into a walk-in freezer at a known temperature of 36°F. 
 # Test Results
 We used Matlab to print the temperature values every second and then created an Excel graph to display the temperature against the time. This shows that the temperature sensor started at 70°F and ended at 36.87°F. 
 
