@@ -106,15 +106,15 @@ for ( i = 0; i < 9; i++) {           // we need 9 bytes
 # Test Procedures
 We tested the accuracy of our temperature sensor to ensure that it would be able to sense freezing outdoor temperatures within a reasonable time frame. This was done by taking our thermistor from an indoor temperature of 70°F into a walk-in freezer at a known temperature of 36°F. 
 # Test Results
-We used Matlab to print the temperature values every second and then created an Excel graph to display the temperature against the time. This shows that the temperature sensor started at 70°F and ended at 36.87°F. Since we were comparing it to known temperatures, this test proved the accuracy of our sensor and code. Therefore, we felt comfortable using it for our project.
+We used Matlab to print the temperature values every second and then created an Excel graph to display the temperature against the time. This shows that the temperature sensor started at 70°F and ended at 36.87°F. 
 
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/Graph.png)
+
 
 # Discussion
 ## Design Decisions
 Not Provided
 ## Test Results Discussion
-The Peltier Live Well Cooler allows the user to select the desired maintenance temperature of the water in the live well using 2 pushbuttons and will then automatically cycle the system on and off while giving the user a real time readout of the current live well water temperature
+Since we were comparing it to known temperatures, this test proved the accuracy of our sensor and code. Therefore, we felt comfortable using it for our project.
 # References
 We used the Sparkfun library to get our motor running.
 https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide
