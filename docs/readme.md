@@ -41,6 +41,8 @@ The car has two types of fuses. The ignition fuses only have a voltage output wh
 
 Next, we set up the motor. We are controlling the motor using an H-bridge. The inputs on the H-bridge, AIN1 and AIN2, are going into pins 7 and 4, respectively. The PWMA pin is attached to pin 3 and the standby is on pin 8. The motors are connected to the two output pins. Using the regulated permanent voltage, we powered the logic for the H-bridge (pin Vcc). On pin Vm, which powers the motor, we are using a 9V battery. The 5V from the permanent will go to the Vin for powering the Arduino and the ground for the Arduino and the voltage regulator was created by attaching a wire to metal inside the car.
 
+![h bridge](https://user-images.githubusercontent.com/35348092/39212541-0532d7e6-47dd-11e8-9669-3c7737306411.jpg)
+
 ## Schematics
 Red wire= positive, Green wire= negative, Blue wire= analog/digital outputs
 
