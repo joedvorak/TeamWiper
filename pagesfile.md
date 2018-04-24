@@ -1,7 +1,7 @@
 Welcome to the Team Wiper's Design Page!
 # Automated Windshield Wiper Lift
 Built by:
-* #### Scrum master: Lucy Nieymeyer
+* #### Scrum master: Lucy Niemeyer
 * #### Product Owner: Erica Kevnick
 * Rebecca Buchanan 
 * Nick Armendarez
