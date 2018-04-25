@@ -110,7 +110,8 @@ We tested the accuracy of our temperature sensor to ensure that it would be able
 
 ![temperature serial](https://user-images.githubusercontent.com/35348092/39217593-bd6a3d8e-47ee-11e8-95d8-8c4493cdd78c.PNG)
 <img width="399" alt="temperature and resistance test" src="https://user-images.githubusercontent.com/35348092/39217548-8991a2b8-47ee-11e8-8e69-671b5731767f.png">
-<img width="399" alt="temperature and resistance test" src="https://user-images.githubusercontent.com/35348092/39217730-4a182f16-47ef-11e8-8734-c1ac164545b8.png">
+<img width="398" alt="timevtemp" src="https://user-images.githubusercontent.com/35348092/39265649-d0ae5748-4895-11e8-907c-88ba4fd0c241.png">
+
 
 
 For another test we simulated our code in TinkerCad. We put our completed code into the program to test if the motor turned on when the temperature sensor sensed temperatures below freezing and the car was off. To do this we had to input made up temperatures and make up the input voltages from the car. This procedure just tested for the code involving starting and stopping the motor when the car battery was on (in theory) and the temperature was freezing (in theory). 
