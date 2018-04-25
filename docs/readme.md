@@ -63,9 +63,7 @@ More specifically, for our H-bridge:
 * GND (right side) is negative terminal of the 9V battery
 
 ## Schematics
-Red wire= positive, Green wire= negative, Blue wire= analog/digital outputs
-
-![](https://github.com/joedvorak/BAE305Example/blob/master/Design%20File%20Images/Tundra%203000_schem.gif)
+![screenshot 60](https://user-images.githubusercontent.com/35348092/39266163-349477c8-4897-11e8-83d1-9faeca16b425.png)
 
 ## Engineering Drawings
 Not Provided.
