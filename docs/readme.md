@@ -68,33 +68,31 @@ More specifically, for our H-bridge:
 ## Engineering Drawings
 Not Provided.
 ## Programming Code
-See this repository for the Arduino Code.
-This code reads the temperature sensor on the OneWire interface and converts it to Fahrenheit and Celsius
-```C
-for ( i = 0; i < 9; i++) {           // we need 9 bytes
-    data[i] = ds.read();
-    Serial.print(" ");
-  }
-  Serial.println();
-  // Convert the data to actual temperature
+See this repository for the Arduino Code. It is labeled 
 
-  int16_t raw = (data[1] << 8) | data[0];
-  if (type_s) {
-    raw = raw << 3; // 9 bit resolution default
-    if (data[7] == 0x10) {
-      // "count remain" gives full 12 bit resolution
-      raw = (raw & 0xFFF0) + 12 - data[6];
-    }
-  } else {
-    byte cfg = (data[4] & 0x60);
-    // at lower res, the low bits are undefined, so let's zero them
-    if (cfg == 0x00) raw = raw & ~7;  // 9 bit resolution, 93.75 ms
-    else if (cfg == 0x20) raw = raw & ~3; // 10 bit res, 187.5 ms
-    else if (cfg == 0x40) raw = raw & ~1; // 11 bit res, 375 ms
-    //// default is 12 bit resolution, 750 ms conversion time
-  }
-  celsius = (float)raw / 16.0;
-  fahrenheit = celsius * 1.8 + 32.0;
+This code converts the resistance given by the thermistor into a value in degrees Fahrenheit and prints the values.
+```C
+void loop() {
+  float reading;   //defines a float variable we will use for the readings from the thermistor
+  float tempC;     //A variable to hold the converted resistance in Celcius
+  float tempF;     //Variable that will hold the converted Celcius temperature in Fahrenheit
+  int PowerIn = digitalRead(POWDET);  //Variable to hold the value for whether the car is on or not
+
+  reading = analogRead(A0);   //Gives a reading based on voltage between 0-1023
+
+  Serial.print("Analog Reading: "); Serial.println(reading);
+
+  reading = (1023 / reading) - 1;   //Converts the reading into a resistance
+  reading = 10000 / reading;        //using a voltage divider
+  Serial.print("Thermistor Resistance: "); Serial.println(reading);
+
+  tempC = -25.91 * log(reading) + 264;
+  Serial.print("Temperature in Celcius: "); Serial.println(tempC);
+
+  tempF = tempC * 1.8 + 32;
+  Serial.print("Temperature in Fahrenheit: "); Serial.println(tempF);
+  Serial.println(" ");
+  delay(1000);
 ```
 # Test Equipment
 * temperature sensor 
