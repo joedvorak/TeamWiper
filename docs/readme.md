@@ -68,7 +68,8 @@ More specifically, for our H-bridge:
 ## Engineering Drawings
 Not Provided.
 ## Programming Code
-See this repository for the Arduino Code. It is labeled 
+See this repository for the Arduino Code. It is labeled "Lift Code" in the code folder.
+
 
 This code converts the resistance given by the thermistor into a value in degrees Fahrenheit and prints the values.
 ```C
