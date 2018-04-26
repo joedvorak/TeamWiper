@@ -133,7 +133,7 @@ The simulation showed that our code was correct and working before we hooked it 
 
 # Discussion
 ## Design Decisions
-Not Provided
+In our design we discovered too late that we did not have the mechanics properly calculated so that our motor actually lifted the blade. Part of our misstep was due to misinformation when buying the motor. We were under the impression that it could operate at a higher torque with 9V. If we were to go back to the production stage we would redesign to use a stepper motor or pulley locking mechanism to achieve the force needed to lift the blade. This was problem that could have been mitigated with better time management and more funds. Originally, we planned to use the ESP32 from Sparkfun but later switched to the Arduino Uno. This is why we got the voltage to under 3.3V for signaling when the car is on. With the Uno we could’ve regulated it to 5V but we decided not to change it. We also decided to wire out the car window as we were using a fellow classmate’s car and were unsure of how to get through the car to under the hood. We didn’t want to risk any harm being done to his car. In production this could more confidently be fixed with more time to wire the fuses to the motor internally. 
 ## Test Results Discussion
 Since we were comparing it to known temperatures, this test proved the accuracy of our sensor and code. Therefore, we felt comfortable using it for our project.
 The simulation provided a safe way to test the code without risk of frying any of the circuit components or doing damage to fuses in the car.
