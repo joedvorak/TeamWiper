@@ -62,6 +62,8 @@ More specifically, for our H-bridge:
 * STBY is Pin 8
 * GND (right side) is negative terminal of the 9V battery
 
+The arm and locking mechanism for lifting the wiper blade and holding it in place until the car is turned on was designed with the motor only running in one direction. The design consisted of a two-prong lever which lifted the blade and a catch system which would roll over itself to catch the blade in the up position and also release it when the motor was turned on. These pieces were 3D printed in poor quality and required some filing to get the pieces to fit together. But with a better 3D printer these design files made in Inventor should work properly when attached to the motor.
+
 ## Schematics
 ![screenshot 60](https://user-images.githubusercontent.com/35348092/39266163-349477c8-4897-11e8-83d1-9faeca16b425.png)
 
