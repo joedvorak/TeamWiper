@@ -69,10 +69,21 @@ The arm and locking mechanism for lifting the wiper blade and holding it in plac
 ![screenshot 60](https://user-images.githubusercontent.com/35348092/39266163-349477c8-4897-11e8-83d1-9faeca16b425.png)
 
 ## Engineering Drawings
+
+Arm
 ![arm](https://user-images.githubusercontent.com/35348092/39279182-7bba5a9a-48c5-11e8-911e-34165f1874a2.PNG)
+
+Lock
 ![lock](https://user-images.githubusercontent.com/35348092/39279224-ac474c5e-48c5-11e8-81db-f62cf0ff936b.PNG)
+
+House
 ![house](https://user-images.githubusercontent.com/35348092/39279280-091065ce-48c6-11e8-89fc-ee1f25860dfd.PNG)
+
+Assembly
 ![assembly](https://user-images.githubusercontent.com/35348092/39279296-247802cc-48c6-11e8-95db-eb4d28a6cf69.PNG)
+
+Freebody
+![freebody](https://user-images.githubusercontent.com/35348092/39279330-5296c378-48c6-11e8-92d4-fa5f5d7b679a.PNG)
 ## Programming Code
 See this repository for the Arduino Code. It is labeled "Lift Code" in the code folder.
 
