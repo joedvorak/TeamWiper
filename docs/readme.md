@@ -10,6 +10,7 @@ Built by:
 # Summary
 The goal of our design was to create a product that would automatically lift windshield wiper blades up and off the windshield when outside temperatures went below freezing. The purpose was to prevent the windshield wiper blades from getting frozen and stuck to one’s windshield in the event that the owner forgot, was too lazy, or was unaware of inclement weather to lift their blades preemptively. With the Automated Windshield Wiper Lift, a microcontroller senses when the car battery is off and the temperature is below freezing to then activate a mounted motor. The motor along with a gearbox should lift the wiper blades off the windshields and holds them in the up position until the car is turned on. Our project resulted in a device which is not powerful enough to lift a blade. While the mechanics were lacking, the code and circuit programming works to power the motor when the specifications are met and lower the blade when the car is turned on. With more funds and time we could have purchased a higher torque motor and got rid of the need for a gearbox but for our purposes this product demonstrates the design criteria but does not actually lift the wiper blade.
 # Video
+https://youtu.be/SqFU_Ezv9GU
 # Materials
 ## Materials
 * Electrifly GD-600 Electric Flight Gear Drive 
