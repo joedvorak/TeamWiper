@@ -10,6 +10,7 @@ Built by:
 # Summary
 The goal of our design was to create a product that would automatically lift windshield wiper blades up and off the windshield when outside temperatures went below freezing. The purpose was to prevent the windshield wiper blades from getting frozen and stuck to one’s windshield in the event that the owner forgot, was too lazy, or was unaware of inclement weather to lift their blades preemptively. With the Automated Windshield Wiper Lift, a microcontroller senses when the car battery is off and the temperature is below freezing to then activate a mounted motor. The motor along with a gearbox should lift the wiper blades off the windshields and holds them in the up position until the car is turned on. Our project resulted in a device which is not powerful enough to lift a blade. While the mechanics were lacking, the code and circuit programming works to power the motor when the specifications are met and lower the blade when the car is turned on. With more funds and time we could have purchased a higher torque motor and got rid of the need for a gearbox but for our purposes this product demonstrates the design criteria but does not actually lift the wiper blade.
 # Video
+https://youtu.be/SqFU_Ezv9GU
 # Materials
 ## Materials
 * Electrifly GD-600 Electric Flight Gear Drive 
@@ -63,11 +64,13 @@ More specifically, for our H-bridge:
 * GND (right side) is negative terminal of the 9V battery
 
 The arm and locking mechanism for lifting the wiper blade and holding it in place until the car is turned on was designed with the motor only running in one direction. The design consisted of a two-prong lever which lifted the blade and a catch system which would roll over itself to catch the blade in the up position and also release it when the motor was turned on. These pieces were 3D printed in poor quality and required some filing to get the pieces to fit together. But with a better 3D printer these design files made in Inventor should work properly when attached to the motor.
+(The engineering drawings are provided below.)
 
 ## Schematics
 ![screenshot 60](https://user-images.githubusercontent.com/35348092/39266163-349477c8-4897-11e8-83d1-9faeca16b425.png)
 
 ## Engineering Drawings
+
 Arm
 ![arm](https://user-images.githubusercontent.com/35348092/39279182-7bba5a9a-48c5-11e8-911e-34165f1874a2.PNG)
 
@@ -84,6 +87,7 @@ Freebody
 ![freebody](https://user-images.githubusercontent.com/35348092/39279330-5296c378-48c6-11e8-92d4-fa5f5d7b679a.PNG)
 ## Programming Code
 See this repository for the Arduino Code. It is labeled "Lift Code" in the code folder.
+
 
 This code converts the resistance given by the thermistor into a value in degrees Fahrenheit and prints the values.
 ```C
@@ -111,18 +115,17 @@ void loop() {
 ```
 # Test Equipment
 * temperature sensor 
-* Arduino uno 
+* Arduino uno
 * wire
-* 2 1KOhm resistors
+* 2 1KOhm resistors 
 * Excel
-* TinkerCAD
+* TinkCAD
 # Test Procedures
 We tested the accuracy of our temperature sensor to ensure that it would be able to sense freezing outdoor temperatures within a reasonable time frame. We used our setup for the thermistor as descirbed previously with the other components (the power supply and voltage sensor) removed. This was done by taking our thermistor from an indoor temperature of 70°F into a walk-in freezer at a known temperature of 36°F. 
 
 ![temperature serial](https://user-images.githubusercontent.com/35348092/39217593-bd6a3d8e-47ee-11e8-95d8-8c4493cdd78c.PNG)
 <img width="399" alt="temperature and resistance test" src="https://user-images.githubusercontent.com/35348092/39217548-8991a2b8-47ee-11e8-8e69-671b5731767f.png">
 <img width="398" alt="timevtemp" src="https://user-images.githubusercontent.com/35348092/39265649-d0ae5748-4895-11e8-907c-88ba4fd0c241.png">
-
 
 
 For another test we simulated our code in TinkerCad. We put our completed code into the program to test if the motor turned on when the temperature sensor sensed temperatures below freezing and the car was off. To do this we had to input made up temperatures and make up the input voltages from the car. This procedure just tested for the code involving starting and stopping the motor when the car battery was on (in theory) and the temperature was freezing (in theory). 
@@ -143,3 +146,4 @@ https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide
 
 We used the gear box manual for calculations when creating the motor arm and power needed
 https://www.greatplanes.com/motors/gearboxes.php
+
