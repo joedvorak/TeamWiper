@@ -16,7 +16,7 @@ The goal of our design was to create a product that would automatically lift win
 
 # Video
 
-[Click to go to Youtube] https://youtu.be/SqFU_Ezv9GU
+https://youtu.be/SqFU_Ezv9GU
 
 # Materials
 
