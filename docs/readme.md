@@ -1,5 +1,7 @@
 Welcome to the Team Wiper's Design Page!
+
 # Automated Windshield Wiper Lift
+
 Built by:
 * #### Scrum master: Lucy Niemeyer
 * #### Product Owner: Erica Kevnick
@@ -7,12 +9,19 @@ Built by:
 * Nick Armendarez
 * Joel Martin
 * Jameson Hunter
+
 # Summary
+
 The goal of our design was to create a product that would automatically lift windshield wiper blades up and off the windshield when outside temperatures went below freezing. The purpose was to prevent the windshield wiper blades from getting frozen and stuck to one’s windshield in the event that the owner forgot, was too lazy, or was unaware of inclement weather to lift their blades preemptively. With the Automated Windshield Wiper Lift, a microcontroller senses when the car battery is off and the temperature is below freezing to then activate a mounted motor. The motor along with a gearbox should lift the wiper blades off the windshields and holds them in the up position until the car is turned on. Our project resulted in a device which is not powerful enough to lift a blade. While the mechanics were lacking, the code and circuit programming works to power the motor when the specifications are met and lower the blade when the car is turned on. With more funds and time we could have purchased a higher torque motor and got rid of the need for a gearbox but for our purposes this product demonstrates the design criteria but does not actually lift the wiper blade.
+
 # Video
-https://youtu.be/SqFU_Ezv9GU
+
+[Click to go to Youtube] https://youtu.be/SqFU_Ezv9GU
+
 # Materials
+
 ## Materials
+
 * Electrifly GD-600 Electric Flight Gear Drive 
 * Arduino Uno microcontroller
 * RC4WD 80t motor
@@ -21,7 +30,9 @@ https://youtu.be/SqFU_Ezv9GU
 * 2 1KOhm resistor
 * Semitec 103AT-11 thermistor
 * 2 ATM fuse taps
+
 ## Tools and Supplies
+
 * solder
 * soldering iron 
 * 3D printer 
@@ -31,7 +42,9 @@ https://youtu.be/SqFU_Ezv9GU
 * breadboard 
 * wire strippers
 * electrical tape
+
 # Assembly Procedures
+
 Our assembly involved coding each component to communicate with the microcontroller individually before setting it up to work all together.
 
 First, we set up our temperature sensors using a temporary breadboard with the sensors connected to A0. The temperature sensor acts as a thermistor which increases resistance as the temperature decreases. To measure what the temperature was we created a voltage divider using a 10kOhm resistor. Once we have it as a resistance we use the values given by the manufacturer to create an equation which converts the resistance into temperature in Celsius. 
@@ -67,6 +80,7 @@ The arm and locking mechanism for lifting the wiper blade and holding it in plac
 (The engineering drawings are provided below.)
 
 ## Schematics
+
 ![screenshot 60](https://user-images.githubusercontent.com/35348092/39266163-349477c8-4897-11e8-83d1-9faeca16b425.png)
 
 ## Engineering Drawings
@@ -85,7 +99,9 @@ Assembly
 
 Freebody
 ![freebody](https://user-images.githubusercontent.com/35348092/39279330-5296c378-48c6-11e8-92d4-fa5f5d7b679a.PNG)
+
 ## Programming Code
+
 See this repository for the Arduino Code. It is labeled "Lift Code" in the code folder.
 
 
@@ -114,13 +130,16 @@ void loop() {
   delay(1000);
 ```
 # Test Equipment
+
 * temperature sensor 
 * Arduino uno
 * wire
 * 2 1KOhm resistors 
 * Excel
 * TinkCAD
+
 # Test Procedures
+
 We tested the accuracy of our temperature sensor to ensure that it would be able to sense freezing outdoor temperatures within a reasonable time frame. We used our setup for the thermistor as descirbed previously with the other components (the power supply and voltage sensor) removed. This was done by taking our thermistor from an indoor temperature of 70°F into a walk-in freezer at a known temperature of 36°F. 
 
 ![temperature serial](https://user-images.githubusercontent.com/35348092/39217593-bd6a3d8e-47ee-11e8-95d8-8c4493cdd78c.PNG)
@@ -128,19 +147,27 @@ We tested the accuracy of our temperature sensor to ensure that it would be able
 <img width="398" alt="timevtemp" src="https://user-images.githubusercontent.com/35348092/39265649-d0ae5748-4895-11e8-907c-88ba4fd0c241.png">
 
 
-For another test we simulated our code in TinkerCad. We put our completed code into the program to test if the motor turned on when the temperature sensor sensed temperatures below freezing and the car was off. To do this we had to input made up temperatures and make up the input voltages from the car. This procedure just tested for the code involving starting and stopping the motor when the car battery was on (in theory) and the temperature was freezing (in theory). 
+For another test we simulated our code in TinkerCad. We put our completed code into the program to test if the motor turned on when the temperature sensor sensed temperatures below freezing and the car was off. To do this we had to input made up temperatures and make up the input voltages from the car. This procedure just tested for the code involving starting and stopping the motor when the car battery was on (in theory) and the temperature was freezing (in theory).
+
 # Test Results
+
 We used Arduino to print the temperature values every second and then created an Excel graph to display the temperature against the time. This shows that the temperature sensor started at 70°F and ended at 36.87°F. 
 
 The simulation showed that our code was correct and working before we hooked it up to the car.
 
 # Discussion
+
 ## Design Decisions
-In our design we discovered too late that we did not have the mechanics properly calculated so that our motor actually lifted the blade. Part of our misstep was due to misinformation when buying the motor. We were under the impression that it could operate at a higher torque with 9V. If we were to go back to the production stage we would redesign to use a stepper motor or pulley locking mechanism to achieve the force needed to lift the blade. This was problem that could have been mitigated with better time management and more funds. Originally, we planned to use the ESP32 from Sparkfun but later switched to the Arduino Uno. This is why we got the voltage to under 3.3V for signaling when the car is on. With the Uno we could’ve regulated it to 5V but we decided not to change it. We also decided to wire out the car window as we were using a fellow classmate’s car and were unsure of how to get through the car to under the hood. We didn’t want to risk any harm being done to his car. In production this could more confidently be fixed with more time to wire the fuses to the motor internally. 
+
+In our design we discovered too late that we did not have the mechanics properly calculated so that our motor actually lifted the blade. Part of our misstep was due to misinformation when buying the motor. We were under the impression that it could operate at a higher torque with 9V. If we were to go back to the production stage we would redesign to use a stepper motor or pulley locking mechanism to achieve the force needed to lift the blade. This was problem that could have been mitigated with better time management and more funds. Originally, we planned to use the ESP32 from Sparkfun but later switched to the Arduino Uno. This is why we got the voltage to under 3.3V for signaling when the car is on. With the Uno we could’ve regulated it to 5V but we decided not to change it. We also decided to wire out the car window as we were using a fellow classmate’s car and were unsure of how to get through the car to under the hood. We didn’t want to risk any harm being done to his car. In production this could more confidently be fixed with more time to wire the fuses to the motor internally.
+
 ## Test Results Discussion
+
 Since we were comparing it to known temperatures, this test proved the accuracy of our sensor and code. Therefore, we felt comfortable using it for our project.
 The simulation provided a safe way to test the code without risk of frying any of the circuit components or doing damage to fuses in the car.
+
 # References
+
 We used the Sparkfun library to get our motor running.
 https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide
 
